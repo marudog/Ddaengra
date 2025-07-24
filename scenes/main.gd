@@ -68,14 +68,11 @@ func start_game():
 # Called every frame. 'delta' is the elapsed time since the previous frame
 func _process(delta):
 	if game_running:
-		scroll_speed += scroll_accel * delta
-
-		scroll += scroll_speed
 		#reset scroll
 		if scroll >= screen_size.x:
 			scroll = 0;
 		# move ground node
-		$ground.position.x = -scroll
+		$ground.position.x = -scroll_speed
 		# 파이프 이동 및 화면 밖이면 제거
 		for pipe in pipes.duplicate():
 			pipe.position.x -= scroll_speed
@@ -171,7 +168,7 @@ func _connect_flag_signal():
 func _on_flag_body_entered(body):
 	if !game_running:
 		return
-		
+
 	if body == $bird:
 		score += 5
 		$scorelabel.text = "SCORE : " + str(score)
