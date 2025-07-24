@@ -123,5 +123,7 @@ animation = &"flying"
 frame_progress = 0.458938
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 4)
 rotation = 1.5708
+scale = Vector2(0.64, 0.799999)
 shape = SubResource("CapsuleShape2D_pm7hl")
