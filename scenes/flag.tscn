@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://bexxm8pecc72y"]
+
+[ext_resource type="Script" uid="uid://cq46vfgwfirt6" path="res://scenes/flag.gd" id="1_32e5v"]
+[ext_resource type="Texture2D" uid="uid://g6knahybfm1e" path="res://assets/flag.png" id="1_76ss4"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_32e5v"]
+radius = 13.0
+
+[node name="Flag" type="Area2D" groups=["flag"]]
+script = ExtResource("1_32e5v")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("1_76ss4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-11, 3)
+scale = Vector2(1, 1.44)
+shape = SubResource("CapsuleShape2D_32e5v")
