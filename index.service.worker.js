@@ -4,7 +4,7 @@
 // Incrementing CACHE_VERSION will kick off the install event and force
 // previously cached resources to be updated from the network.
 /** @type {string} */
-const CACHE_VERSION = '1753346815|11199738784';
+const CACHE_VERSION = '1753347807|12191681229';
 /** @type {string} */
 const CACHE_PREFIX = 'Flappy Daengra-sw-cache-';
 const CACHE_NAME = CACHE_PREFIX + CACHE_VERSION;

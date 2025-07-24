@@ -33,7 +33,7 @@ func new_game():
 	game_over = false
 	score = 0
 	scroll_speed = 4.0
-	$scorelabel.text = "HI SCORE : " + str(hi_score) + "\n CLICK OR TOUCH SCREEN"
+	$scorelabel.text = "HI SCORE : " + str(hi_score) + "\n CLICK OR TOUCH"
 	$gameover.hide()
 	get_tree().call_group("pipes", "queue_free")
 	get_tree().call_group("flag", "queue_free")
